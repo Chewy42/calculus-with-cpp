@@ -14,6 +14,10 @@
 
 #include <stdio.h>
 #include <iostream>
+#include <string>
+#include <cstring>
+
+
 
 using namespace std;
 
@@ -38,7 +42,15 @@ findLimit::~findLimit(){
 }
 
 int findLimit::calculate(std::string function, float lim){
-    
+    char functionArr[function.length() + 1];
+    strcpy(functionArr, function.c_str());
+    for(int i = 0; i < function.length() + 1; i++)
+    {
+        if(functionArr[i] == 'x')
+        {
+            functionArr[i] = lim;
+        }
+    }
 }
 
 #endif
