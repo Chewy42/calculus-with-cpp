@@ -44,13 +44,18 @@ findLimit::~findLimit(){
 int findLimit::calculate(std::string function, float lim){
     char functionArr[function.length() + 1];
     strcpy(functionArr, function.c_str());
+    int insertIndex;
     for(int i = 0; i < function.length() + 1; i++)
     {
+        cout << functionArr << endl;
         if(functionArr[i] == 'x')
         {
+            cout << "HERE >>>> " << lim << endl;
             functionArr[i] = lim;
+            insertIndex = i;
         }
     }
+    return lim;
 }
 
 #endif

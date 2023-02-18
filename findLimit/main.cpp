@@ -9,3 +9,16 @@
 // * @version 1.0
 // * @since 2023-02-17
 // */
+
+#include "findLimit.h"
+#include <iostream>
+using namespace std;
+
+int main(int argc, char* argv[]){
+    int number;
+    cout << "Enter a number: ";
+    cin >> number;
+    findLimit test(number);
+    cout << test.calculate("5x-3", argv[1]) << endl;
+    return 0;
+}
