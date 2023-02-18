@@ -10,36 +10,35 @@
 // * @since 2023-02-17
 // */
 
-#ifndef IS_MULTIPLE_OF_THREE_H
-#define IS_MULTIPLE_OF_THREE_H
+#ifndef FIND_LIMIT_H
 
-class isMultipleOfThree{
+#include <stdio.h>
+#include <iostream>
+
+using namespace std;
+
+class findLimit{
 public:
-    isMultipleOfThree();
-    isMultipleOfThree(int number);  
-    virtual ~isMultipleOfThree();
-    bool calculate();
+    findLimit();
+    findLimit(int number);  
+    virtual ~findLimit();
+    int calculate(std::string function, float lim);
 private:
     int number;
 };
 
-isMultipleOfThree::isMultipleOfThree(){
+findLimit::findLimit(){
 }
 
-isMultipleOfThree::isMultipleOfThree(int number){
+findLimit::findLimit(int number){
     this->number = number;
 }
 
-isMultipleOfThree::~isMultipleOfThree(){
+findLimit::~findLimit(){
 }
 
-bool isMultipleOfThree::calculate(){
-    if(number % 3 == 0){
-        return true;
-    }
-    else{
-        return false;
-    }
+int findLimit::calculate(std::string function, float lim){
+    
 }
 
 #endif
